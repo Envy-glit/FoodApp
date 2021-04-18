@@ -1,7 +1,8 @@
-package com.shkiper.foodapp
+package com.shkiper.foodapp.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.shkiper.foodapp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,6 +1,6 @@
 package com.shkiper.foodapp.di
 
-import com.shkiper.foodapp.MainActivity
+import com.shkiper.foodapp.ui.main.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

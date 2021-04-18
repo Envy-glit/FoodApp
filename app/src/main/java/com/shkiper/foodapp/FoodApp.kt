@@ -3,6 +3,7 @@ package com.shkiper.foodapp
 import android.util.Log
 import com.facebook.stetho.BuildConfig
 import com.facebook.stetho.Stetho
+import com.shkiper.foodapp.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
 
