@@ -3,12 +3,18 @@ package com.shkiper.foodapp.ui.main
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.shkiper.foodapp.R
+import com.shkiper.foodapp.databinding.ActivityMainBinding
+import com.shkiper.foodapp.extensions.createFactory
 import com.shkiper.foodapp.repo.OrderRepoI
 import com.shkiper.foodapp.room.entity.Food
+import com.shkiper.foodapp.ui.MainViewModel
+import com.shkiper.foodapp.ui.adapter.FoodAdapter
+import com.shkiper.foodapp.ui.adapter.OnClickListener
 import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
@@ -77,7 +83,7 @@ class MainActivity : DaggerAppCompatActivity() {
 
     private fun setRecyclerView() {
         rv_food.layoutManager = LinearLayoutManager(this)
-        adapter = FoodAdapter(foodList, object : OnClickListener{
+        adapter = FoodAdapter(foodList, object : OnClickListener {
             override fun update(food: Food, position: Int) {
                 itemPosition = position
                 viewModel.updateItem(food)
