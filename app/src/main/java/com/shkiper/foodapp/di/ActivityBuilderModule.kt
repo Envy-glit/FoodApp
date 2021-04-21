@@ -1,5 +1,6 @@
 package com.shkiper.foodapp.di
 
+import com.shkiper.foodapp.ui.cart.CartActivity
 import com.shkiper.foodapp.ui.main.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -10,7 +11,7 @@ abstract class ActivityBuilderModule {
     @ContributesAndroidInjector
     abstract fun mainActivityProvider(): MainActivity
 
-//    @ContributesAndroidInjector
-//    abstract fun cartActivityProvider(): CartActivity
+    @ContributesAndroidInjector
+    abstract fun cartActivityProvider(): CartActivity
 
 }

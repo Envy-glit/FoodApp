@@ -15,6 +15,7 @@ import com.shkiper.foodapp.room.entity.Food
 import com.shkiper.foodapp.ui.MainViewModel
 import com.shkiper.foodapp.ui.adapter.FoodAdapter
 import com.shkiper.foodapp.ui.adapter.OnClickListener
+import com.shkiper.foodapp.ui.cart.CartActivity
 import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
@@ -94,9 +95,9 @@ class MainActivity : DaggerAppCompatActivity() {
     }
 
     private fun onClick() {
-//        view_bottom.setOnClickListener {
-//            CartActivity.start(this)
-//        }
+        view_bottom.setOnClickListener {
+            CartActivity.start(this)
+        }
     }
 
     override fun onResume() {
