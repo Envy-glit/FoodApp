@@ -15,7 +15,7 @@ class DataInitializer(
 ) : Worker(context, workerParams) {
     override fun doWork(): Result {
         Log.d(TAG, " >>> Starting initializing data in database")
-        var result= Result.failure()
+        var result = Result.failure()
         try {
             applicationContext.assets.open(FOOD_DATA_FILENAME).use { inputStream ->
                 JsonReader(inputStream.reader()).use { jsonReader ->
